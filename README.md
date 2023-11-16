@@ -1,10 +1,12 @@
 # Cd36_OSNs
-- This repository contains all codes used to analyse the data reported in "Olfactory Sensory Neuron Diversity Beyond OR Genes in mice".
+- This repository contains all codes used to analyse the data reported in "Regulatory Mechanisms Orchestrating Cellular Diversity in Cd36+ Olfactory Sensory Neurons Revealed by Single-Cell Multi-omics Analysis".
+- https://www.biorxiv.org/content/10.1101/2023.09.21.558403v1
 
 ### Summary
+By analyzing single-cell multi-omics data of mature OSNs in the mouse olfactory epithelium, we systematically revealed the transcriptome diversity and spatial distribution of Cd36+ OSNs and found a specific subset of olfactory receptors co-expressed with Cd 36 in a deterministic manner, and identified and confirmed Tshz1 as a critical transcription factor that directly promotes Cd36 expression in OSNs through enhancer binding.
 
 ### Data
-- Data is available on the NCBI GEO at Accession number GSExxxxxx.
+- Data is available on the NCBI GEO at Accession number GSE224604.
 
 ### Environment requirements
 1. Make a new conda environment, e.g. `conda create -n Cd36_OSNs`
