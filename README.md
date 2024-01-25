@@ -3,7 +3,7 @@
 - https://www.biorxiv.org/content/10.1101/2023.09.21.558403v1
 
 ### Summary
-By analyzing single-cell multi-omics data of mature OSNs in the mouse olfactory epithelium, we systematically revealed the transcriptome diversity and spatial distribution of Cd36+ OSNs and found a specific subset of olfactory receptors co-expressed with Cd 36 in a deterministic manner, and identified and confirmed Tshz1 as a critical transcription factor that directly promotes Cd36 expression in OSNs through enhancer binding.
+By analyzing single-cell multi-omics data of mature OSNs in the mouse olfactory epithelium, we systematically revealed the transcriptome diversity and spatial distribution of Cd36+ OSNs and found a specific subset of olfactory receptors co-expressed with Cd36 in a deterministic manner, and identified and confirmed Tshz1 as a critical transcription factor that directly promotes Cd36 expression in OSNs through enhancer binding.
 
 ### Data
 - Data is available on the NCBI GEO at Accession number GSE224604.
