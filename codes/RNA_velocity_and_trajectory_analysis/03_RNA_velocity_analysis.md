@@ -1,4 +1,4 @@
-### Estimating RNA velocity
+## Estimating RNA velocity
 - Generate spliced and unspliced matrices by Velocyto
 	- script : 01_run_RNA_Velocity.sh
 - Convert data from Seurat to Python / anndata
