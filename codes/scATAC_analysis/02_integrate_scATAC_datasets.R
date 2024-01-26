@@ -17,7 +17,7 @@ library(ggpubr)
 set.seed(100)
 
 ## Creat output directory 
-out_dir <- "~/Cd36_OSNs/output/scATAC/seurat/integrated_analysis/"
+out_dir <- "~/Cd36_OSNs/output/scATAC/Signac/integrated_analysis/"
 if(!file.exists(out_dir)){
   dir.create(file.path(out_dir))
 }
