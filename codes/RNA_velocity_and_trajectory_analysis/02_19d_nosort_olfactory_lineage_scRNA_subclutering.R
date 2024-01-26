@@ -252,25 +252,6 @@ DimPlot(filtered_nonsort_scRNA, reduction = "umap",label=TRUE,label.size=5,cols=
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),panel.background = element_blank(),panel.border = element_blank(),plot.title = element_text(hjust = 0.5,size=rel(1.5),face="bold"))
 dev.off()
 
-## split nearly mature ORNs (Adcy3- OSNs) into Tshz1+ cells and Tshz1- cells
-cells <- rownames(filtered_nonsort_scRNA@meta.data)[which(filtered_nonsort_scRNA$detail_cell_type %in% c("Nearly mature ORNs"))]
-Tshz1_exp_df <- FetchData(object=filtered_nonsort_scRNA,vars="Tshz1",cells=cells,slot="data")
-
-## Figure S7F
-pdf(str_c(out_dir,"filtered_nonsort_HBC_lineage_nearly_mature_ORNs_Tshz1_expression_distribution.pdf"))
-ggplot(data=Tshz1_exp_df,aes(x=Tshz1))+
-  geom_density() + 
-  labs(x="Tshz1 expression",y="Density",title="Tshz1 expression in nearly mature ORNs") +
-  geom_vline(xintercept=quantile(Tshz1_exp_df$Tshz1,seq(0,1,0.05))[19],linetype="dashed",size=0.5,color="black")+
-  theme_classic()+
-  theme(panel.grid.major = element_blank(),panel.grid.minor = element_blank(),axis.title=element_text(size=rel(2),),axis.text.y = element_text(color="black",size=rel(1.8)), axis.text.x = element_text(color="black",size=rel(1.8)),axis.line = element_line(colour="black",size = 1),plot.title = element_text(hjust = 0.3,size=rel(2),face="bold"))
-dev.off()
-
-
-Tshz1_cells <- rownames(Tshz1_exp_df)[which(Tshz1_exp_df$Tshz1>= quantile(Tshz1_exp_df$Tshz1,seq(0,1,0.05))[19])]
-non_Tshz1_cells <- rownames(Tshz1_exp_df)[which(Tshz1_exp_df$Tshz1< quantile(Tshz1_exp_df$Tshz1,seq(0,1,0.05))[19])]
-
-
 ## Figure 4B - Gene expression of Tshz1 (exclude HBCs)
 remove_HBCs_nonsort_scRNA <- subset(filtered_nonsort_scRNA,subset=detail_cell_type!="HBCs"& UMAP_1>(-10))
 gene_exp_palettes <- as.vector(ArchRPalettes[["solarExtra"]])
